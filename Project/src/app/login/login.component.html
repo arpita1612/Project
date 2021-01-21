@@ -1,0 +1,33 @@
+<div class="display-4 col-sm-9 container "> Login Page using Bootstrap</div>
+<br><br>
+<form  class="col-sm-8 container" [formGroup] = "login" (ngSubmit)="onSubmit()">
+    <h1 class="text-danger font-weight-bold">Login</h1>
+    <div class="form-group">
+        <label for="user">Username</label>
+        <input type="email" class="form-control" id="user" placeholder="Enter Username" formControlName = "Username">
+    </div>
+    <div class="form-group">
+        <label for="pass">Password</label>
+        <input type="password" class="form-control" id="pass" placeholder="Password" formControlName = "Password">
+    </div>
+    <div class="form-check">
+        <input type="checkbox" class="form-check-input" id="check">
+        <label class="form-check-label" for="check">Remember me!</label>
+    </div>
+    <button type="submit" class="btn btn-primary"  (click)="onSubmitLogin()" [disabled]  = "login.invalid" >LogIn</button>
+    <br><br>    
+    <button type="submit" class="btn btn-primary"  (click)="onSubmitRegister()">New User</button>
+</form>
+<br><br>
+<!-- <div class="row container">
+    <div class="col-md-3 bg-primary"> For grid medium </div>
+    <div class="col-md-6 bg-warning"> For grid medium </div>
+    <div class="col-md-3 bg-primary"> For grid medium </div>
+</div>
+<br><br>
+<div class="row container">
+    <div class="col-xl-3 bg-primary"> For grid medium </div>
+    <div class="col-xl-6 bg-warning"> For grid medium </div>
+    <div class="col-xl-3 bg-primary"> For grid medium </div>
+</div> 
+-->

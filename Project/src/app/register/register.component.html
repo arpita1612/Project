@@ -1,0 +1,47 @@
+<div class="display-4 col-sm-9 container "> Registration Page </div>
+<br><br>
+<form  class="col-sm-8 container" [formGroup] = "Register" (ngSubmit)="onRegister()">
+    <h1 class="text-warning font-weight-bold">Register</h1>
+    <div class="form-group">
+        <label for="user">Username</label>
+        <input type="email" class="form-control" id="user" placeholder="Enter Username" formControlName = "Username">
+    </div>
+    <div class="form-group">
+        <label for="pass">Password</label>
+        <input type="password" class="form-control" id="pass" placeholder="Password" formControlName = "Password">
+    </div>
+    <div class="form-group">
+    <label for="check" style="padding-right: 10px;">
+        Gender :     
+    </label>   
+    <input type="radio" id="check" name="Gender" value="Male" required formControlName="Gender">
+    <label for="check" style="padding-right: 15px; padding-left: 3px;">
+        Male    
+    </label>
+    <input type="radio" id="check" name="Gender" value="Female" required formControlName="Gender"> 
+    <label for="check" style="padding-right: 15px; padding-left: 3px;">
+        Female    
+    </label>
+    <input type="radio" id="check" name="Gender" value="Other" required formControlName="Gender">
+    <label for="check" style="padding-right: 15px; padding-left: 3px;">
+        Other   
+    </label>
+    </div>
+    
+    <div>  
+    <label for="option" style="padding-right: 10px;">
+        Register As : 
+    </label>
+    <input type="radio" id="option" name="option" value="Admin" required formControlName="option">
+    <label for="check" style="padding-right: 15px; padding-left: 3px;">
+        Admin   
+    </label>
+    <input type="radio" id="option" name="option" value="Student" required formControlName="option">
+    <label for="check" style="padding-right: 15px; padding-left: 3px;">
+        Student   
+    </label>
+    </div>
+
+    <button type="submit" class="btn btn-primary"  (click)="onRegister()" [disabled]  = "Register.invalid" >Register</button>
+    
+</form>
